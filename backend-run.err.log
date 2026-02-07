@@ -832,3 +832,36 @@ INFO:     connection open
 INFO:     connection closed
 INFO:     ('127.0.0.1', 62698) - "WebSocket /ws/chat" [accepted]
 INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 64610) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     ('127.0.0.1', 63879) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     ('127.0.0.1', 62726) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     ('127.0.0.1', 60257) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 59137) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 63985) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     connection closed
+INFO:     connection closed
+INFO:     ('127.0.0.1', 51366) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     ('127.0.0.1', 51840) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     ('127.0.0.1', 54629) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 59597) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     connection closed
+INFO:     connection closed
+INFO:     connection closed
+INFO:     ('127.0.0.1', 57270) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
