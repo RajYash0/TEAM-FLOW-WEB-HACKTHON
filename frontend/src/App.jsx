@@ -3,6 +3,7 @@ import RealOrbitViewer from './RealOrbitViewer'
 import { HomeSpaceScene, TransitionSpaceScene } from './SpaceScenes'
 import SimpleCharts from './SimpleCharts'
 import LiveAsteroidMapReal from './LiveAsteroidMapReal'
+import ShootingStarCursor from './ShootingStarCursor'
 import './styles.css'
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
@@ -407,8 +408,18 @@ function App() {
       setBgVideoLoop(false)
       setShowBgVideo(true)
       setBgVideoKey((v) => v + 1)
+    } else if (activeTab === 'dashboard') {
+      setBgVideoSrc('/dashboard-bg.mp4')
+      setBgVideoLoop(false)
+      setShowBgVideo(true)
+      setBgVideoKey((v) => v + 1)
     } else if (activeTab === 'about') {
       setBgVideoSrc('/about-bg.mp4')
+      setBgVideoLoop(true)
+      setShowBgVideo(true)
+      setBgVideoKey((v) => v + 1)
+    } else if (activeTab === 'watch') {
+      setBgVideoSrc('/watch-bg.mp4')
       setBgVideoLoop(true)
       setShowBgVideo(true)
       setBgVideoKey((v) => v + 1)
@@ -430,6 +441,7 @@ function App() {
 
   return (
     <main className="app-shell">
+      <ShootingStarCursor />
       {showBgVideo && (
         <video
           key={bgVideoKey}
@@ -471,7 +483,7 @@ function App() {
       {activeTab === 'home' && (
         <section className="home panel">
           <div className="hero-copy">
-            <h2>A Weather App for Asteroids</h2>
+            <h2>Simple Astro</h2>
             <p>We convert complex NASA asteroid streams into simple public safety signals with plain-language risk explanations, visual motion paths, and real-time updates every 15 seconds.</p>
             <div className="hero-badges">
               <span>{loading ? 'Updating live feed...' : `Updated ${lastUpdated || 'just now'}`}</span>

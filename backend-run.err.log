@@ -820,3 +820,15 @@ INFO:     connection open
 INFO:     connection closed
 INFO:     ('127.0.0.1', 50885) - "WebSocket /ws/chat" [accepted]
 INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 49268) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 59044) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 61040) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 62698) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open

@@ -26,6 +26,7 @@ body {
     radial-gradient(circle at 84% 2%, rgba(70, 150, 255, 0.18), transparent 28%),
     linear-gradient(160deg, var(--bg-3), var(--bg-2), var(--bg-1));
   min-height: 100vh;
+  cursor: none;
 }
 
 .app-shell {
@@ -60,6 +61,51 @@ body {
   pointer-events: none;
   z-index: 0;
   opacity: 0.45;
+}
+
+.cursor-fx-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 60;
+}
+
+.star-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, #ffffff, #9be9ff 48%, #5acbff 80%);
+  box-shadow: 0 0 15px rgba(124, 216, 255, 0.7), 0 0 30px rgba(80, 185, 255, 0.45);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 61;
+}
+
+.star-cursor::before,
+.star-cursor::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(124, 216, 255, 0));
+}
+
+.star-cursor::before {
+  height: 24px;
+  transform: translate(-50%, -50%);
+}
+
+.star-cursor::after {
+  height: 20px;
+  opacity: 0.6;
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 @keyframes drift {
@@ -1038,5 +1084,15 @@ input[type='range'] {
   .real-orbit-canvas {
     height: 340px;
     min-height: 280px;
+  }
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+  .cursor-fx-canvas,
+  .star-cursor {
+    display: none;
   }
 }
