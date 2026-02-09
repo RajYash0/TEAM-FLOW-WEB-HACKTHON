@@ -1,0 +1,3 @@
+[build]
+  command = "npm run --prefix frontend build"
+  publish = "frontend/dist"
